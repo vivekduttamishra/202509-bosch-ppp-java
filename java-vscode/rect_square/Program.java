@@ -4,6 +4,8 @@ public class Program {
     public static void main(String[] args) {
         Rectangle[] rectangles = {
             new Rectangle(5, 10),
+            new RectSquare(5),
+           // new Square(4), //not allowed
             new Rectangle(14,7)
         };
 
@@ -16,6 +18,10 @@ public class Program {
             System.out.println("Orientation: " + rectangle.getOrientation());
             System.out.println();
         }
-        System.out.println("Shapes Demo");        
+
+
+        var square = new RectSquare(5);
+        square.setHeight(10);
+        square.draw();
     }
 }

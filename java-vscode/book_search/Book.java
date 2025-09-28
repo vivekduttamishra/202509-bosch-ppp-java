@@ -1,0 +1,1 @@
+public record Book(String title, String author, int price,double rating);

@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="AppUIBuilder"/>
+    <fullyQualifiedTypeName name="java.awt.Container"/>
+    <fullyQualifiedTypeName name="in.conceptarchitect.ui.core.Container"/>
+    <fullyQualifiedTypeName name="in.conceptarchitect.ui.rubber.RubberUIFactory"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="in.conceptarchitect.myapp.UIFactoryCreator"/>
+    <fullyQualifiedTypeName name="in.conceptarchitect.ui.core.UIFactory"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

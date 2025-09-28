@@ -12,9 +12,15 @@ public class Rectangle {
     public double getWidth() {
         return width;
     }
+    public void setWidth(double width) {
+        this.width = width;
+    }
 
     public double getHeight() {
         return height;
+    }
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public double getArea() {
@@ -35,6 +41,11 @@ public class Rectangle {
     }
 
     public void draw() {
-        System.out.println("Rectangle [" + width + " , " + height+" ]");
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+      return getClass().getName()+" [" + width + " , " + height+" ]"  ; 
     }
 }
