@@ -70,4 +70,14 @@ public class DynamicArray<T> implements IndexedList<T> {
         builder.append("]");
         return builder.toString();
     }
+
+     public <R> R execute(Task<T,R> task){
+        if(!task.init())
+            return null;
+
+        for(int i=0;i<size;i++)
+            task.execute(array[i]);
+
+        return task.finish(); 
+    }
 }

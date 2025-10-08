@@ -1,4 +1,7 @@
 package in.conceptarchitect.collections;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class LinkedList<T> implements IndexedList<T> {
 
@@ -74,6 +77,64 @@ public class LinkedList<T> implements IndexedList<T> {
 
         builder.append("]");
         return builder.toString();
+    }
+
+    // public int indexOf(T value){
+
+    //     int index=0;
+
+    //     var current=first;
+    //     while(current!=null){
+    //         if(current.value.equals(value))
+    //             return index;
+    //         index++;
+
+    //         current=current.next;
+    //     }
+
+    //     return -1;
+        
+    // }
+
+    // public void print(){
+    //     var current=first;
+    //     while(current!=null){
+    //         System.out.println(current.value);
+    //         current=current.next;
+    //     }
+    // }
+
+    // public void save(String fileName)throws IOException{
+    //     var writer = new PrintWriter(new FileWriter(fileName));
+    //     var current=first;
+    //     while(current!=null){
+    //         writer.println(current.value);
+    //         current=current.next;
+    //     }
+    // }
+
+    // public double average(){
+    //     var sum=0.0;
+    //     var current=first;
+    //     while(current!=null){
+    //         sum+= (Double)current.value;
+    //         current=current.next;
+    //     }
+    //     return sum/size();
+    // }
+
+
+    public <R> R execute(Task<T,R> task){
+        if(!task.init())
+            return null;
+
+        var current=first;
+        while(current!=null){
+            task.execute(current.value);
+            current=current.next;
+        }
+
+        return task.finish(); 
     }
 
 }

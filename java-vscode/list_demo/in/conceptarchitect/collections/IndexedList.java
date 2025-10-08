@@ -5,6 +5,7 @@ public interface IndexedList<T> {
     int size();
     T get(int index);
     void set(int index, T value);
+    <R> R execute(Task<T,R> task);
 }
 
 
